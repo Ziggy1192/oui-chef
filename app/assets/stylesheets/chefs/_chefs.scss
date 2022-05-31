@@ -1,0 +1,57 @@
+.main-box {
+  margin: auto;
+  height: 100vh;
+  background-color: white;
+}
+
+.cuisines-box {
+  height: 80px;
+  background-color: #ffffff;
+}
+
+.cuisine-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: 80px;
+}
+
+.cuisine-list li{
+  list-style: none;
+  display: inline;
+}
+
+
+.chefs-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+  grid-gap: 80px;
+  margin: 0 80px;
+}
+
+.card-chef {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.card-img {
+border-radius: 8px;
+margin-bottom: 16px;
+background-size: cover;
+}
+
+.card-info {
+border-radius: 8px;
+background-color: #E4C9A0;
+}
+
+.card-info h4 {
+  padding-left: 24px;
+  padding-top: 24px;
+}
+.card-info p {
+  padding-left: 24px;
+  padding-top: 24px;
+}
