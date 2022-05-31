@@ -1,1 +1,23 @@
-<h1>hi, this is me, THE chef</h1>
+<div class="container">
+
+  <div class="row">
+    <div class="col-7">
+      <h1><%= @chef.user.first_name.upcase %> <%= @chef.user.last_name.upcase  %></h1>
+      <div class="chef-infos d-flex justify-content-start">
+        <h2>4.99</h2>
+        <h2>Reviews</h2>
+        <h2>Superhost</h2>
+      </div>
+    </div>
+    <div class="col-5">
+      <img src="https://www.apchef.co.uk/wp-content/uploads/2021/01/Image_of_Ali_Chef.jpg" alt="chef-profile-picture">
+
+      <%= simple_form_for [@chef, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
