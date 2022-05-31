@@ -2,14 +2,38 @@
 .main-page {
 display: grid;
 grid-template-columns: 1fr 1fr;
+height: 100vh;
 }
 
 .left {
-  background-color: aqua;
-  height: 600px;
+  background-color: #e4c9a0;
+  text-align: center;
+  h1 {
+    color: #f45700;
+    letter-spacing: 0.1em;
+    font-size: 48px;
+    margin-bottom: 24px;
+    font-weight: 550;
+
+  }
 }
 
+
 .right {
-  background-color: rgb(9, 10, 10);
-  height: 600px;
+  background-image: url(/assets/homepage_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-search {
+  color: white;
+  margin-left: 10px;
+  background: #f45700;
+  border-radius: 4px;
+  padding: 8px 24px;
+  border: #f45700;
+}
+
+.btn-search:hover {
+  background: #244D23;
 }

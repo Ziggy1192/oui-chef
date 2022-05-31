@@ -1,12 +1,23 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
 
 <div class="main-page">
-  <div class="left">
+  <div class="left container d-flex flex-column align-items-center justify-content-center">
+
+  <h1 class="mb-5">WELCOME TO <br> OUI CHEFS! </h1>
+
+
+  <%= form_tag chefs_path, method: :get, class: "d-flex mt-3" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "FIND A CHEF NEAR YOU!"
+    %>
+    <%= submit_tag "SEARCH", class: "btn-search" %>
+  <% end %>
+
 
   </div>
   <div class="right">
-
   </div>
 
 </div>
