@@ -10,3 +10,29 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-lewagon .dropdown {
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: medium;
+  font-weight: lighter;
+  margin-left: 10%;
+}
+
+.button-login {
+  color: white;
+  padding: 8px 24px;
+  background-color: #244D23;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: medium;
+}
+
+.button-login:hover {
+  color: white;
+  background-color: #f46700;
+}
