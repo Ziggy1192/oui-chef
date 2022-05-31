@@ -1,9 +1,21 @@
 puts "Cleaning database"
-User.destroy_all
 Chef.destroy_all
+User.destroy_all
 
 puts "Creating users..."
 theresa = User.create!(email: "theresa@test.com", password: "123456", first_name: "theresa", last_name: "adeyemi", address:" 202 Kensington Church Street")
 
+puts "Creating users..."
+jette = User.create!(email: "jette@test.com", password: "123456", first_name: "jette", last_name: "handshumacher", address:" somewhere in london")
+
+puts "Creating users..."
+ziggy1192 = User.create!(email: "ziggy@test.com", password: "123456", first_name: "dziugas", last_name: "bartkevicius", address:" 11 Granham road, London")
+
 puts "Creating chefs..."
-Chef.create!(speciality: "Michelin starred", cuisine: "French", price: 100, profile: "I have worked in Michelin starred kitchens, book me", user: theresa)
+Chef.create!(speciality: "Michelin starred", cuisine: "French", price: 100, profile: "I have worked in Michelin starred kitchens, book me", img_url: "/assets/theresa.jpg", user: theresa)
+
+puts "Creating chefs..."
+Chef.create!(speciality: "fancy shpancy", cuisine: "Indian", price: 5.99, profile: "master of indian style street foods", img_url: "/assets/jette.jpg", user: jette)
+
+puts "Creating chefs..."
+Chef.create!(speciality: "good with knives", cuisine: "American", price: 39.99, profile: "eat more often than cook, but ill make it very special just for you if you hire me!", img_url: "/assets/ziggy.jpg", user: ziggy1192)
