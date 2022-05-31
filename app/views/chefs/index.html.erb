@@ -10,7 +10,7 @@
   <div class="chefs-cards">
     <% @chefs.each do |chef| %>
     <div class="card-chef">
-      <div class="card-img" style="background-image: url(<%=chef.img_url%>)">
+      <div class="card-img" style="background-image: url(<%=asset_path chef.img_url%>)">
       </div>
       <div class="card-info">
         <h4><%= chef.user.first_name.upcase%>
