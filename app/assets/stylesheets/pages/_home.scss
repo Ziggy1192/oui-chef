@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.main-page {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  background-color: aqua;
+  height: 600px;
+}
+
+.right {
+  background-color: rgb(9, 10, 10);
+  height: 600px;
+}
