@@ -11,4 +11,12 @@
 @import "components/index";
 @import "pages/index";
 
-@import "chefs/index"
+@import "chefs/index";
+
+a {
+
+  color: black;
+  &:hover {
+    color: rgb(68, 68, 68);
+  }
+}

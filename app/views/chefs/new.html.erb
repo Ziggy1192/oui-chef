@@ -1,3 +1,9 @@
-<div class="contaner">
-
+<div class="container">
+  <%= simple_form_for @chef do |f| %>
+  <%= f.input :profile %>
+  <%= f.input :speciality, collection: Chef::CATEGORIES %>
+  <%= f.input :cuisine %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
+  <% end %>
 </div>
