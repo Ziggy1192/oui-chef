@@ -1,27 +1,27 @@
 <div class="main-box">
   <div class="cuisines-box">
     <ul class="cuisine-list" >
-      <li>good</li>
-      <li>its</li>
-      <li>because</li>
-      <li>cuisine</li>
+      <li><%= image_tag "meat.png" %></li>
+      <li><%= image_tag "seafood.png" %></li>
+      <li><%= image_tag "vegan.png" %></li>
+      <li><%= image_tag "vegetarian.png" %></li>
+      <li><%= image_tag "dessert.png" %></li>
     </ul>
   </div>
-  <div class="chefs-cards">
-    <% @chefs.each do |chef| %>
-    <div class="card-chef">
-      <div class="card-img" style="background-image: url(<%=asset_path chef.img_url%>)">
-      </div>
-      <div class="card-info">
-        <h4><%= chef.user.first_name.upcase%>
-        <%=chef.user.last_name.upcase%></h4>
-        <p><%=chef.speciality.upcase %></p>
-        <p>FROM <strong>£<%=chef.price %></strong>/ 3 COURSES</p>
-      </div>
+    <div class="chefs-cards">
+      <% @chefs.each do |chef| %>
+        <%= link_to chef_path(chef) do %>
+        <div class="card-chef">
+          <div class="card-img" style="background-image: url(<%=asset_path chef.img_url%>)">
+          </div>
+          <div class="card-info">
+            <h4><%=chef.user.first_name.upcase%>
+            <%=chef.user.last_name.upcase%></h4>
+            <p><%=chef.speciality.upcase %></p>
+            <p>FROM <strong>£<%=chef.price %></strong>/ PER MEAL</p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-
 </div>
-  <h1>hi, this is page with our chefs</h1>
-<%= link_to "Become a Chef!", new_chef_path %>

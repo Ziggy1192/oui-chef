@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :chefs, only: %i[index show new create] do
     resources :bookings, only: %i[create]
   end
+  resources :bookings, only: :show
 end

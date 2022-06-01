@@ -7,13 +7,15 @@
 .cuisines-box {
   height: 80px;
   background-color: #ffffff;
+  border-bottom: solid 2px rgba(228,201,160,.2);
 }
 
 .cuisine-list {
   display: flex;
   justify-content: space-around;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 112px;
+  padding-right: 80px;
   padding-top: 25px;
 }
 
@@ -29,6 +31,7 @@
   height: 500px;
   grid-gap: 80px;
   margin: 0 80px;
+  margin-top: 46px;
 }
 
 .card-chef {
@@ -54,4 +57,9 @@ background-color: #E4C9A0;
 .card-info p {
   padding-left: 24px;
   padding-top: 24px;
+}
+
+.cuisine-list li img {
+  height: 32px;
+  width: 32px;
 }
