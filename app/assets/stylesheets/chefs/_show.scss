@@ -1,0 +1,133 @@
+
+.container {
+  height: 1000px;
+}
+.chef-container {
+  font-size: medium;
+  color: #333232;
+  margin-top: 38px;
+  .chef-infos {
+  color: #F46700;
+  size: 16px;
+  margin-top: 10px;
+  font-size: 8%;
+}
+}
+
+
+.font-light {
+  font-weight: 100;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.text-grey {
+  color: grey;
+}
+
+.box-beige {
+  background-color: #E4C9A0;
+  height: 175px;
+  width: 670px;
+  margin-top: 42px;
+  border-radius: 4px;
+  font-size: 8px;
+  padding: 20px;
+}
+
+.box-beige h4 {
+  padding-left: 24px;
+  padding-top: 24px;
+}
+.box-beige p {
+  padding-left: 24px;
+  padding-top: 24px;
+}
+
+.box-orange {
+  background-color: transparent;
+  height: 294px;
+  width: 670px;
+  margin-top: 42px;
+  border-radius: 4px;
+  font-size: 8px;
+  padding: 20px;
+  border: 0.5px solid #F46700;
+}
+
+.chef-image {
+  margin-top: 40px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-size: cover;
+  height: 361.05px;
+  width: 527px
+}
+
+.bookings {
+  margin-top: 40px;
+  color: #244D23;
+  border: 0.5px solid #244D23;
+  padding: 16px 16px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: white;
+  padding: 7px 24px;
+  background-color: #244D23;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: medium;
+  margin-top: 63px;
+  display: block;
+  width: 90%;
+  border: #244D23;
+}
+
+.btn-primary:hover {
+  background: #F46700;
+}
+
+.carousel-inner {
+  margin-top: 40px;
+  width: 1000px;
+  border-radius: 4px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  margin-top: 110px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
+hr {
+  color: #E4C9A0;
+  margin-top: 50px;
+  border: 0.75px solid #E4C9A0;
+}
