@@ -8,7 +8,7 @@ class Chef < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-  against: [ :cuisine, :profile ],
+  against: [ :cuisine ],
   associated_against: {
     user: [ :first_name, :last_name ]
   },

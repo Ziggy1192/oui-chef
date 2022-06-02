@@ -2,8 +2,8 @@ class ChefsController < ApplicationController
   def index
     if params[:query].present?
       sql_query = <<~SQL
-        chefs.title @@ :query
-        OR chefs.synopsis @@ :query
+        chefs.cuisine @@ :query
+        OR chefs.profile @@ :query
         OR users.first_name @@ :query
         OR users.last_name @@ :query
       SQL
@@ -26,8 +26,6 @@ class ChefsController < ApplicationController
     @chef = Chef.new(chef_params)
     @chef.save
   end
-
-
 
   private
 
