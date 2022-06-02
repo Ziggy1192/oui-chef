@@ -18,10 +18,10 @@ puts "Creating users..."
 User.create!(email: "demo@mail.com", password: "123456", first_name: "JettaZigg", last_name: "HandBart", address:"London,Germany")
 
 puts "Creating chefs..."
-Chef.create!(cuisine: "French", price: 100, profile: "I have worked in Michelin starred kitchens, book me", img_url: "theresa.jpg", user: theresa)
+Chef.create!(vegan: true, cuisine: "French", price: 100, profile: "I have worked in Michelin starred kitchens, book me", img_url: "theresa.jpg", user: theresa)
 
 puts "Creating chefs..."
-Chef.create!(cuisine: "Indian", price: 5.99, profile: "master of indian style street foods", img_url: "jette.jpg", user: jette)
+Chef.create!(dessert: true, meat: true, cuisine: "Indian", price: 5.99, profile: "master of indian style street foods", img_url: "jette.jpg", user: jette)
 
 puts "Creating chefs..."
-Chef.create!(cuisine: "American", price: 39.99, profile: "eat more often than cook, but ill make it very special just for you if you hire me!", img_url: "ziggy.jpg", user: ziggy1192)
+Chef.create!(fish: true, vegetarian: true, cuisine: "American", price: 39.99, profile: "eat more often than cook, but ill make it very special just for you if you hire me!", img_url: "ziggy.jpg", user: ziggy1192)
