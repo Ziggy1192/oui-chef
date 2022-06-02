@@ -80,6 +80,7 @@
   border: 0.5px solid #244D23;
   padding: 16px 16px;
   border-radius: 4px;
+  height: 290px;
 }
 
 .btn-primary {
@@ -90,7 +91,7 @@
   margin-left: 20px;
   margin-right: 20px;
   font-size: medium;
-  margin-top: 63px;
+  margin-top: 25px;
   display: block;
   width: 90%;
   border: #244D23;
@@ -108,7 +109,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .footer {
@@ -140,4 +141,10 @@ hr {
   color: #E4C9A0;
   margin-top: 50px;
   border: 0.75px solid #E4C9A0;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background:  #E4C9A0;
+  height: 16px;
+  width: 16px;
 }

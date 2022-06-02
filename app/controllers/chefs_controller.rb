@@ -16,6 +16,7 @@ class ChefsController < ApplicationController
   def show
     @chef = Chef.find(params[:id])
     @booking = Booking.new
+    @first_name = @chef.user.first_name
   end
 
   def new
