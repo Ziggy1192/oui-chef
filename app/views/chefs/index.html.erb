@@ -12,7 +12,7 @@
       <% @chefs.each do |chef| %>
         <%= link_to chef_path(chef) do %>
         <div class="card-chef">
-          <div class="card-img" style="background-image: url(<%=asset_path chef.img_url%>)">
+          <div class="card-img" style="background-image: url('<%= cl_image_path chef.user.photo.key %>')">
           </div>
           <div class="card-info">
             <h4><%=chef.user.first_name.upcase%>
