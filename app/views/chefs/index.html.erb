@@ -12,11 +12,30 @@
       <% @chefs.each do |chef| %>
         <%= link_to chef_path(chef) do %>
         <div class="card-chef">
+          <% if chef.user.photo.attached? %>
           <div class="card-img" style="background-image: url('<%= cl_image_path chef.user.photo.key %>')">
           </div>
+          <% end %>
           <div class="card-info">
             <h4><%=chef.user.first_name.upcase%>
             <%=chef.user.last_name.upcase%></h4>
+            <div class="little-image">
+              <% if chef.vegan %>
+              <%= image_tag 'vegan.png', width: 30, height: 30%>
+              <% end %>
+              <% if chef.vegetarian %>
+              <%= image_tag 'vegetarian.png', width: 30, height: 30%>
+              <% end %>
+              <% if chef.meat %>
+              <%= image_tag 'meat.png', width: 30, height: 30%>
+              <% end %>
+              <% if chef.fish %>
+              <%= image_tag 'seafood.png', width: 30, height: 30%>
+              <% end %>
+              <% if chef.dessert %>
+              <%= image_tag 'dessert.png', width: 30, height: 30%>
+              <% end %>
+            </div>
             <p>FROM <strong>£<%=chef.price %></strong>/ PER MEAL</p>
           </div>
         </div>

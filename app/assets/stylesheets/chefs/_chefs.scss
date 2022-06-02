@@ -1,6 +1,6 @@
 .main-box {
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
 }
 
@@ -28,10 +28,10 @@
 .chefs-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 500px;
   grid-gap: 80px;
   margin: 0 80px;
   margin-top: 46px;
+  padding-bottom: 40px;
 }
 
 .card-chef {
@@ -56,10 +56,17 @@ background-color: #E4C9A0;
 }
 .card-info p {
   padding-left: 24px;
-  padding-top: 24px;
+  padding-top: 10px;
 }
 
 .cuisine-list li img {
   height: 32px;
   width: 32px;
+}
+
+.little-image {
+  padding-left: 24px;
+  padding-right: 120px;
+  display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
