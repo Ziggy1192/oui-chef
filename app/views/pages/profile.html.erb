@@ -1,1 +1,12 @@
-<h1>hiiii</h1>
+<div class="profile-page">
+
+  <div class= "profile-left" style="background-image: url('<%= cl_image_path current_user.photo.key %>">
+  </div>
+
+  <div class="profile-right">
+  <div class= 'green-box'>
+  <h1><i class="fa-solid fa-user"></i><%= current_user.first_name.upcase %></h1>
+  </div>
+  </div>
+
+</div>
