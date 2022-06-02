@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="col-5">
-      <div class='chef-image' style="background-image: url(<%=asset_path(@chef.img_url)%>)"></div>
+      <div class='chef-image'></div>
 
      <div class='bookings'>
       <%= simple_form_for [@chef, @booking], data: {controller: "price"} do |f| %>

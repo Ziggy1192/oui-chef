@@ -1,6 +1,6 @@
 class Chef < ApplicationRecord
-  CATEGORIES = %w[vegetarian vegan seafood meat dessert]
   belongs_to :user
+  has_many_attached :photos
   validates :speciality, presence: true, inclusion: { in: CATEGORIES }
   validates :cuisine, presence: true
   validates :price, presence: true
