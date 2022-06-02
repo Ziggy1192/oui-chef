@@ -15,12 +15,17 @@ class ChefsController < ApplicationController
 
   def create
     @chef = Chef.new(chef_params)
-    @chef.save
+    @chef.user = current_user
+    if @chef.save!
+      redirect_to chef_path(@chef)
+    else
+      render :new, :unprocessable_entity
+    end
   end
 
   private
 
   def chef_params
-    params.require(:chef).permit(:cuisine, :speciality, :profile)
+    params.require(:chef).permit(:cuisine, :profile, :vegan, :vegetarian, :fish, :meat, :dessert, photos: [])
   end
 end

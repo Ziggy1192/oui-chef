@@ -1,9 +1,17 @@
 <div class="container">
   <%= simple_form_for @chef do |f| %>
   <%= f.input :profile %>
-  <%= f.input :speciality, collection: Chef::CATEGORIES %>
+<div class="containter">
+<p>Categories</p>
+  <%= f.input :vegan, as: :boolean %>
+  <%= f.input :vegetarian, as: :boolean %>
+  <%= f.input :meat, as: :boolean %>
+  <%= f.input :fish, as: :boolean %>
+  <%= f.input :dessert, as: :boolean %>
+</div>
   <%= f.input :cuisine %>
   <%= f.input :price %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit %>
   <% end %>
 </div>

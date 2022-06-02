@@ -11,12 +11,12 @@
       <div class='box-beige'>
         <h4><%= @chef.user.first_name.upcase%>
         <%=@chef.user.last_name.upcase%></h4>
-        <p><%=@chef.speciality.upcase %></p>
+      <%# <p><%=@chef.speciality.upcase %>
       </div>
       <div class='box-orange'></div>
     </div>
     <div class="col-5">
-      <div class='chef-image' style="background-image: url(<%=asset_path(@chef.img_url)%>)"></div>
+      <div class='chef-image'></div>
 
      <div class='bookings'> <%= simple_form_for [@chef, @booking] do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
