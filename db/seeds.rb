@@ -13,6 +13,7 @@ jette.photo.attach(io: File.open('app/assets/images/jette.jpg'), filename: 'jett
 puts "Creating users..."
 ziggy1192 = User.create!(email: "ziggy@test.com", password: "123456", first_name: "dziugas", last_name: "bartkevicius", address:" 11 Granham road, London")
 ziggy1192.photo.attach(io: File.open('app/assets/images/ziggy.jpg'), filename: 'ziggy.jpg', content_type: 'image/jpg')
+
 puts "Creating users..."
 User.create!(email: "demo@mail.com", password: "123456", first_name: "JettaZigg", last_name: "HandBart", address:"London,Germany")
 

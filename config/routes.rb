@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[create]
   end
   resources :bookings, only: :show
+  get "profile", to: "pages#profile", as: "profile"
 end
