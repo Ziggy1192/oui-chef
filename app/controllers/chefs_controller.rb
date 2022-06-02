@@ -1,7 +1,16 @@
 class ChefsController < ApplicationController
   def index
-    @chefs = Chef.all
-
+    if params[:query].present?
+      sql_query = <<~SQL
+        chefs.cuisine @@ :query
+        OR chefs.profile @@ :query
+        OR users.first_name @@ :query
+        OR users.last_name @@ :query
+      SQL
+      @chefs = Chef.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @chefs = Chef.all
+    end
   end
 
   def show
