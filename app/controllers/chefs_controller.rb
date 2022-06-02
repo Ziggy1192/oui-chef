@@ -36,6 +36,6 @@ class ChefsController < ApplicationController
   private
 
   def chef_params
-    params.require(:chef).permit(:cuisine, :profile, :vegan, :vegetarian, :fish, :meat, :dessert, photos: [])
+    params.require(:chef).permit(:cuisine, :price, :profile, :vegan, :vegetarian, :fish, :meat, :dessert, photos: [])
   end
 end
