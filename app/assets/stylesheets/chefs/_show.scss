@@ -23,6 +23,7 @@
 
 .text-grey {
   color: grey;
+  margin-left: 15px;
 }
 
 .box-beige {
@@ -35,13 +36,11 @@
   padding: 20px;
 }
 
-.box-beige h4 {
-  padding-left: 24px;
-  padding-top: 24px;
-}
 .box-beige p {
-  padding-left: 24px;
-  padding-top: 24px;
+  font-size: 16px;
+  padding-left: 23px;
+  padding-top: 9px;
+  color: #244D23;
 }
 
 .box-orange {
@@ -53,6 +52,17 @@
   font-size: 8px;
   padding: 20px;
   border: 0.5px solid #F46700;
+}
+
+.box-orange p {
+  font-size: 16px;
+  padding-left: 23px;
+  padding-top: 9px;
+  color: #333232;
+}
+
+.info {
+  margin-top: 40px;
 }
 
 .chef-image {

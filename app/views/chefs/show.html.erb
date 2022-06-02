@@ -4,23 +4,29 @@
     <div class="col-7 chef-container">
       <h1 class='m-3 text-grey'><%= @chef.user.first_name.upcase %> <%= @chef.user.last_name.upcase  %></h1>
       <div class="chef-infos d-flex justify-content-start">
-        <h2 class='m-3 font-light'><i class="fa-solid fa-star-of-life"></i><strong>4.99</strong></h2>
+        <h2 class='m-3 font-light'><i class="fa-solid fa-star-of-life"></i><strong> <%= @chef.price %></strong></h2>
         <h2  class='m-3 font-light'> 40 REVIEWS </h2>
         <h2  class='m-3 font-light'><i class="fa-solid fa-fish"></i>MASTER</h2>
       </div>
       <div class='box-beige'>
-        <h4><%= @chef.user.first_name.upcase%>
-        <%=@chef.user.last_name.upcase%></h4>
+        <p><%= 'VEGAN LOVER WITH A PASSION FOR FASHION'%></p>
         <p><%=@chef.speciality.upcase %></p>
+        <p><%='I LOVE SUSHI' %></p>
       </div>
-      <div class='box-orange'></div>
+      <div class='box-orange'>
+      <p><i class="fa-solid fa-user"></i><%= @chef.profile%></p>
+      <p class='info'><i class="fa-solid fa-location-pin"></i><%= @chef.user.address %></p>
+      <p class='info'><i class="fa-solid fa-at"></i><%= @chef.user.email %></p>
+      </div>
     </div>
     <div class="col-5">
       <div class='chef-image' style="background-image: url(<%=asset_path(@chef.img_url)%>)"></div>
 
-     <div class='bookings'> <%= simple_form_for [@chef, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, html5: true %>
+     <div class='bookings'>
+      <%= simple_form_for [@chef, @booking], data: {controller: "price"} do |f| %>
+        <%= f.input :start_date, as: :date, html5: true, data:{ price_target: "start"} %>
         <%= f.input :end_date, as: :date, html5: true %>
+        <p>PRICE:</p>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>
       </div>
