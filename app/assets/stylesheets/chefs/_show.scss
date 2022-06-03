@@ -1,17 +1,17 @@
 
 .show-box {
-  height: 1000px;
+  height: 760pxpx;
 }
 .chef-container {
   font-size: medium;
   color: #333232;
   margin-top: 38px;
-  .chef-infos {
-  color: #F46700;
-  size: 16px;
-  margin-top: 10px;
-  font-size: 8%;
-}
+    .chef-infos {
+    color: #F46700;
+    size: 16px;
+    margin-top: 10px;
+    font-size: 8%;
+  }
 }
 
 
@@ -43,7 +43,14 @@
   color: #244D23;
 }
 
+.contact-info {
+  border-top: solid 2px rgba(228,201,160,.2);
+  padding-top: 16px;
+}
+
 .box-orange {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   background-color: transparent;
   height: 294px;
   width: 670px;
@@ -57,12 +64,11 @@
 .box-orange p {
   font-size: 16px;
   padding-left: 23px;
-  padding-top: 9px;
   color: #333232;
 }
 
 .info {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .chef-image {
@@ -101,16 +107,25 @@
   background: #F46700;
 }
 
-.carousel-inner {
-  margin-top: 40px;
-  width: 1000px;
-  border-radius: 4px;
-  height: 300px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 120px;
-}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background:  #E4C9A0;
+    height: 16px;
+    width: 16px;
+  }
+
+
+
+  .carousel-inner {
+    margin-top: 40px;
+    width: 1000px;
+    border-radius: 4px;
+    height: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+  }
 
 .footer {
   background: #F4F4F4;
@@ -135,16 +150,4 @@
 }
 .footer-links a:hover {
   opacity: 1;
-}
-
-hr {
-  color: #E4C9A0;
-  margin-top: 50px;
-  border: 0.75px solid #E4C9A0;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background:  #E4C9A0;
-  height: 16px;
-  width: 16px;
 }

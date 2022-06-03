@@ -18,10 +18,19 @@ puts "Creating users..."
 User.create!(email: "demo@mail.com", password: "123456", first_name: "JettaZigg", last_name: "HandBart", address:"London,Germany")
 
 puts "Creating chefs..."
-Chef.create!(vegan: true, cuisine: "French", price: 100, profile: "I have worked in Michelin starred kitchens, book me", img_url: "theresa.jpg", user: theresa)
+theresa = Chef.create!(speciality: "Very good at super fancy dishes, but portion sizes are extremely small.", vegan: true, cuisine: "French, German, Spanish", price: 100, profile: "I'm extremely passionat about food and arts. Every meal I create is a masterpiece! in my 59 years of experience I earned 43 Mischellin stars and still counting. HIRE MEEEE!!!! ", img_url: "theresa.jpg", user: theresa)
+theresa.photos.attach(io: File.open('app/assets/images/food1.jpg'), filename: 'food1.jpg', content_type: 'image/jpg')
+theresa.photos.attach(io: File.open('app/assets/images/food2.jpg'), filename: 'food2.jpg', content_type: 'image/jpg')
+theresa.photos.attach(io: File.open('app/assets/images/food3.jpg'), filename: 'food3.jpg', content_type: 'image/jpg')
 
 puts "Creating chefs..."
-Chef.create!(dessert: true, meat: true, cuisine: "Indian", price: 5.99, profile: "master of indian style street foods", img_url: "jette.jpg", user: jette)
+jette = Chef.create!(speciality: "Can recreate just about any Indian street food around the world!", dessert: true, meat: true, cuisine: "Indian, Pakistani, Bengal", price: 5.99, profile: "I cooked all around the world, tried every single food out there and I'm capable of recreating just about anything I try. Home cook at heart I will serve you street food style meals youve never had before.", img_url: "jette.jpg", user: jette)
+jette.photos.attach(io: File.open('app/assets/images/food4.jpg'), filename: 'food4.jpg', content_type: 'image/jpg')
+jette.photos.attach(io: File.open('app/assets/images/food5.jpg'), filename: 'food5.jpg', content_type: 'image/jpg')
+jette.photos.attach(io: File.open('app/assets/images/food6.jpg'), filename: 'food6.jpg', content_type: 'image/jpg')
 
 puts "Creating chefs..."
-Chef.create!(fish: true, vegetarian: true, cuisine: "American", price: 39.99, profile: "eat more often than cook, but ill make it very special just for you if you hire me!", img_url: "ziggy.jpg", user: ziggy1192)
+ziggy1192 = Chef.create!(speciality: "very good at making BBQ, and even better at eating it.", fish: true, vegetarian: true, cuisine: "American, Italian, Jamaican", price: 39.99, profile: "I eat more often than cook, but I'll make it very special just for you if you hire me! I have worked in many different places throughut my years as a PRO chef, and this venture on this beautiful site OUI Chefs is my next into the world of Cheffin'", img_url: "ziggy.jpg", user: ziggy1192)
+ziggy1192.photos.attach(io: File.open('app/assets/images/food7.jpg'), filename: 'food7.jpg', content_type: 'image/jpg')
+ziggy1192.photos.attach(io: File.open('app/assets/images/food8.jpg'), filename: 'food8.jpg', content_type: 'image/jpg')
+ziggy1192.photos.attach(io: File.open('app/assets/images/food9.jpg'), filename: 'food9.jpg', content_type: 'image/jpg')

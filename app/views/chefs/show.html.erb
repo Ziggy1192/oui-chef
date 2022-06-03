@@ -1,5 +1,5 @@
 <div class="container show-box">
-
+  <%= link_to "back to search", chefs_path%>
   <div class="row">
     <div class="col-7 chef-container">
       <h1 class='m-3 text-grey'><%= @chef.user.first_name.upcase %> <%= @chef.user.last_name.upcase  %></h1>
@@ -9,13 +9,19 @@
         <h2  class='m-3 font-light'><i class="fa-solid fa-fish"></i>MASTER</h2>
       </div>
       <div class='box-beige'>
-        <p><%= 'VEGAN LOVER WITH A PASSION FOR FASHION'%></p>
-        <p><%='I LOVE SUSHI' %></p>
+        <p><%= @chef.speciality%></p>
+        <p>Master of <%= @chef.cuisine %> cuisines.</p>
+        <p>Only from <strong>£<%= @chef.price %></strong> per meal!</p>
       </div>
       <div class='box-orange'>
-      <p><i class="fa-solid fa-user"></i><%= @chef.profile%></p>
-      <p class='info'><i class="fa-solid fa-location-pin"></i><%= @chef.user.address %></p>
-      <p class='info'><i class="fa-solid fa-at"></i><%= @chef.user.email %></p>
+        <div class="profile-info">
+          <p><i class="fa-solid fa-user" style="margin-right: 16px"></i><%= @chef.profile%></p>
+        </div>
+        <div class="contact-info">
+          <p>Contact me!</p>
+          <p class='info'><i class="fa-solid fa-location-pin" style="margin-right: 16px"></i><%= @chef.user.address %></p>
+          <p class='info'><i class="fa-solid fa-at" style="margin-right: 16px"></i><%= @chef.user.email %></p>
+        </div>
       </div>
     </div>
     <div class="col-5">
@@ -25,10 +31,11 @@
       <% end %>
 
      <div class='bookings'>
-      <%= simple_form_for [@chef, @booking], data: {controller: "price"} do |f| %>
-        <%= f.input :start_date, as: :date, html5: true, data:{ price_target: "start"} %>
-        <%= f.input :end_date, as: :date, html5: true %>
-        <p>Price:</p>
+        <%= simple_form_for [@chef, @booking], data: {controller: "price"} do |f| %>
+        <%= f.input :start_date, as: :date, html5: true, input_html: { data: { price_target: "start", action: 'change->price#calculate' } } %>
+        <%= f.input :end_date, as: :date, html5: true, input_html: { data: { price_target: "end", action: 'change->price#calculate' } } %>
+        <input data-price-target="fee" name="<%= @chef.price %>" type="hidden"/>
+        <p data-price-target="total">Price:</p>
         <%= f.submit "BOOK #{@first_name.upcase}", class: 'btn btn-primary' %>
       <% end %>
       </div>
@@ -39,8 +46,8 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
   <% @chef.photos.each do |photo| %>
-    <div class="carousel-item active">
-      <img src="<%= cl_image_path photo.key %>" class="d-block w-100" alt="...">
+    <div class="carousel-item  <%= " active" if photo == @chef.photos.first %>" style="background-size: cover;">
+      <img src="<%= cl_image_path photo.key, :width=>1000, :height=>450, :crop=>"fill" %>" class="d-block w-100" alt="...">
     </div>
     <% end %>
   </div>
@@ -53,6 +60,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
 
 <div class="footer">
   <div class="footer-links">
