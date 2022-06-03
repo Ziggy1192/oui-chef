@@ -1,12 +1,11 @@
 <div class="container show-box">
-  <%= link_to "back to search", chefs_path%>
   <div class="row">
     <div class="col-7 chef-container">
       <h1 class='m-3 text-grey'><%= @chef.user.first_name.upcase %> <%= @chef.user.last_name.upcase  %></h1>
       <div class="chef-infos d-flex justify-content-start">
         <h2 class='m-3 font-light'><i class="fa-solid fa-star-of-life"></i><strong> <%= @chef.price %></strong></h2>
         <h2  class='m-3 font-light'> 40 REVIEWS </h2>
-        <h2  class='m-3 font-light'><i class="fa-solid fa-fish"></i>MASTER</h2>
+
       </div>
       <div class='box-beige'>
         <p><%= @chef.speciality%></p>
