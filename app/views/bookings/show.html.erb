@@ -1,6 +1,11 @@
-<div class="container">
-  <h1>CONGRATULATIONS!🧑‍🍳</h1>
-  <h2>You successfully made a booking!</h2>
-  <p>Your booking starts on <strong><%=@booking.start_date.strftime('%d/%m/%Y')%></strong>, and ends <strong><%= @booking.end_date.strftime('%d/%m/%Y') %></strong> </p>
-  <h3>Hope to see you again</h3>
+
+<div class='background'>
+<div class='container-white'>
+<div class="container-confirmation">
+  <h1> <strong>CONGRATULATIONS!</strong>🧑‍🍳</h1>
+  <h2>YOU SUCCESSFULLY MADE YOUR BOOKING WITH <strong><span style="color:#244D23"> CHEF <%= @chef.user.first_name.upcase %> </span></strong>!</h2>
+  <p>YOUR PRIVATE DINING EXPERIENCE STARTS <strong><%=@booking.start_date.strftime('%d/%m/%Y')%></strong>, AND ENDS <strong><%= @booking.end_date.strftime('%d/%m/%Y') %></strong> </p>
+  <h3>HOPE TO SEE YOU AGAIN SOON !</h3>
+</div>
+</div>
 </div>
