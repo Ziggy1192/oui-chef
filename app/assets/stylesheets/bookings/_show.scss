@@ -1,0 +1,30 @@
+.background {
+  background-color: #F46700;
+  height: 100vh;
+}
+
+.container-confirmation {
+  color: white;
+  text-align: center;
+  h2{
+    font-size: 22px;
+    margin-top: 50px;
+    line-height: 40px;
+  }
+  p {
+    font-size: 22px;
+    margin-top: 30px;
+    line-height: 40px;
+  }
+  h3 {
+    margin-top: 100px;
+  }
+}
+
+.container-white {
+  border: 0.5px solid white;
+  height: 50vhvh;
+  width: 100vh;
+  margin-left: 400px;
+  padding: 90px;
+}
