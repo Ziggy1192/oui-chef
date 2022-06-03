@@ -8,6 +8,8 @@ class ChefsController < ApplicationController
         OR users.last_name @@ :query
       SQL
       @chefs = Chef.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    elsif params[:category].present?
+      @chefs = Chef.where("#{params[:category]}": true )
     else
       @chefs = Chef.all
     end

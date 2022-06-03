@@ -1,11 +1,22 @@
 <div class="main-box">
   <div class="cuisines-box">
     <ul class="cuisine-list" >
-      <li class="img" ><%= image_tag "meat.png" %></li>
-      <li class="img"><%= image_tag "seafood.png" %></li>
-      <li class="img"><%= image_tag "vegan.png" %></li>
-      <li class="img"><%= image_tag "vegetarian.png" %></li>
-      <li class="img"><%= image_tag "dessert.png" %></li>
+      <%= link_to chefs_path(category: "meat") do %>
+        <li class="img" ><%= image_tag "meat.png" %></li>
+      <% end %>
+      <%= link_to chefs_path(category: "fish") do %>
+        <li class="img"><%= image_tag "seafood.png" %></li>
+      <% end %>
+      <%= link_to chefs_path(category: "vegan") do %>
+        <li class="img"><%= image_tag "vegan.png" %></li>
+      <% end %>
+      <%= link_to chefs_path(category: "vegetarian") do %>
+        <li class="img"><%= image_tag "vegetarian.png" %></li>
+      <% end %>
+      <%= link_to chefs_path(category: "dessert") do %>
+        <li class="img"><%= image_tag "dessert.png" %></li>
+      <% end %>
+
     </ul>
   </div>
     <div class="chefs-cards">
